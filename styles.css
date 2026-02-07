@@ -1,0 +1,132 @@
+:root {
+    --primary-color: rgb(200, 120, 135);
+    --secondary-color: rgb(245, 220, 230);
+    --accent-color: rgb(155, 75, 100);
+    --light-cream: rgb(255, 250, 252);
+    --warm-gold: rgb(230, 170, 190);
+    --text-color: rgb(120, 60, 80);
+    --text-light: rgb(255, 250, 252);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    font-family: "Quicksand", sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color)
+}
+
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: all 0.5s ease;
+    font-size: 1.5rem;
+    font-family: "Sour Gummy", "Quicksand", sans-serif;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--accent-color);
+    border-top: 5px solid var(--text-light);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+#loading-text {
+    transition: all 0.3s ease;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hide content initially */
+.hidden {
+    display: none;
+}
+
+
+h1 {
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.btn {
+    margin-top: 60px;
+    color: var(--text-light);
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    font-family: "Sour Gummy", "Quicksand", sans-serif;
+}
+.btn:hover {
+    background-color: var(--accent-color);
+}
+
+.correctBtn {
+    margin-top: 60px;
+    color: var(--text-light);
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: "Sour Gummy", "Quicksand", sans-serif;
+    animation: vibe 2.5s infinite;
+    transition: background-color 0.3s ease;
+    margin-right: 20px;
+}
+
+.correctBtn:hover {
+    background-color: var(--accent-color);
+}
+
+@keyframes vibe {
+  0% { transform: scale(1) rotate(0deg);}
+  8% { transform: scale(1.1) rotate(1deg);}
+  16% { transform: scale(1.1) rotate(-1deg);}
+  24% { transform: scale(1.1) rotate(1deg);}
+  32% { transform: scale(1.1) rotate(-1deg);}
+  40% { transform: scale(1) rotate(0deg);}
+  70% { transform: scale(1) rotate(0deg); }
+  100% { transform: scale(1) rotate(0deg);}
+}
+
+.highlight {
+    font-family: "Kalnia Glaze", "Dancing Script", cursive;
+}
+
+.highlight-cursive {
+    font-family: "Dancing Script", cursive;
+    font-style: italic;
+    font-size: 4rem;
+    color: var(--accent-color);
+}
+
